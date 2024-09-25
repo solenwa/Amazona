@@ -157,22 +157,17 @@ User model
 | USE         | `/api/products`                  |                            |                |              | Mount productRouter as a middleware                           |
 | USE         | `/api/users`                     |                            |                |              | Mount userRouter as a middleware                              |
 | USE         | `/api/orders`                    |                            |                |              | Mount orderRouter as a middle                                 |
-
-SEEDROUTER
-| GET         | `/`                              |                            |                |              | Seed database for Product Model and User Model                |
-PRODUCTROUTER
-| GET         | `/`                              |                            | 200            | 404          | Home page listing all products                                |
-| GET         | `/slug/:slug`                    | { slug }                   | 200            | 404          | Detail page of one product                                    |
-| GET         | `/:id`                           | { id }                     | 200            | 404          | Detail page of one product                                    |
-USERTOUER
-| POST        | `/signin`                        | { email, password }        | 200            | 401          | Check if user exist, password matches then store user in session |
-| POST        | `/signup`                        |  { name, email, password } | 200            | 404          | Check if user does not exist already, then create user with encrypted password, and store user in session  |
-| PUT         | `/profile`                       | { id }                     | 200            | 404          | Updates user information                                        |
-ORDERROUTER
-| POST        | `/`                              | { req.body }               | 201            | 404          | Create new order linked to the user                                                                               |
-| GET         | `/mine`                          | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
-| GET         | `/:id`                           | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
-| PUT         | `/:id/pay`                       | { id }                     | 200            | 404          | Updates payment status of order                                                                                              |
+| seedRouter.GET | `/`                              |                            |                |              | Seed database for Product Model and User Model                |
+| productRouter.GET         | `/`                              |                            | 200            | 404          | Home page listing all products                                |
+| productRouter.GET         | `/slug/:slug`                    | { slug }                   | 200            | 404          | Detail page of one product                                    |
+| productRouter.GET         | `/:id`                           | { id }                     | 200            | 404          | Detail page of one product                                    |
+| userRouter.POST        | `/signin`                        | { email, password }        | 200            | 401          | Check if user exist, password matches then store user in session |
+| userRouter.POST        | `/signup`                        |  { name, email, password } | 200            | 404          | Check if user does not exist already, then create user with encrypted password, and store user in session  |
+| userRouter.PUT         | `/profile`                       | { id }                     | 200            | 404          | Updates user information                                        |
+| orderRouter.POST        | `/`                              | { req.body }               | 201            | 404          | Create new order linked to the user                                                                               |
+| orderRouter.GET         | `/mine`                          | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
+| orderRouter.GET         | `/:id`                           | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
+| orderRouter.PUT         | `/:id/pay`                       | { id }                     | 200            | 404          | Updates payment status of order                                                                                              |
 
 ## Links
 
