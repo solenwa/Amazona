@@ -4,6 +4,12 @@
 
 This is a replicate of amazon using MERN stack.
 
+## Links
+
+[Monorepository Link](https://github.com/solenwa/Amazona)
+
+[Deploy Link](https://amazona-ih67.onrender.com)
+
 ## User Stories
 
 - **Home:** As an anon/user, I can see the list of products that I can buy.
@@ -168,10 +174,3 @@ User model
 | orderRouter.GET         | `/mine`                          | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
 | orderRouter.GET         | `/:id`                           | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
 | orderRouter.PUT         | `/:id/pay`                       | { id }                     | 200            | 404          | Updates payment status of order                                                                                              |
-
-## Links
-
-[Monorepository Link](https://github.com/solenwa/Amazona)
-
-[Deploy Link](https://amazona-ih67.onrender.com)
-
