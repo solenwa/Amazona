@@ -175,3 +175,5 @@ User model
 | orderRouter.GET         | `/mine`                          | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
 | orderRouter.GET         | `/:id`                           | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
 | orderRouter.PUT         | `/:id/pay`                       | { id }                     | 200            | 404          | Updates payment status of order                                                                                              |
+| GET                     | `/health`                        |                            | 200            |             | Render will periodically call this endpoint as a means to monitor the health of the application                                                       |
+
