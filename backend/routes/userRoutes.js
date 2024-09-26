@@ -31,7 +31,7 @@ userRouter.post(
   expressAsyncHandler(async (req, res) => {
     const newUser = new User({
       name: req.body.name,
-      email: req.body.name,
+      email: req.body.email,
       password: bcrypt.hashSync(req.body.password),
     });
 
