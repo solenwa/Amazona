@@ -27,7 +27,7 @@ userRouter.post(
 );
 
 userRouter.post(
-  'signup',
+  '/signup',
   expressAsyncHandler(async (req, res) => {
     const newUser = new User({
       name: req.body.name,
@@ -48,7 +48,7 @@ userRouter.post(
 
 userRouter.put(
   '/profile',
-  isAuth ,
+  isAuth,
   expressAsyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user) {
