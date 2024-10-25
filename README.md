@@ -8,7 +8,7 @@ This is a replicate of amazon using MERN stack.
 
 [Monorepository Link](https://github.com/solenwa/Amazona)
 
-[Deploy Link](https://amazona-ih67.onrender.com)
+[Deploy Link](https://amazona-ih67.onrender.com) (Free deployment with Render, might spin down with inactivity)
 
 ## User Stories
 
@@ -44,6 +44,7 @@ This is a replicate of amazon using MERN stack.
 | `/placeorder`           | PlaceOrderScreen, CheckoutSteps     | user only `<isAuth>`    | Recap of order details                                                |
 | `/order/:id`            | OrderScreen                         | user only `<isAuth>`    | Recap of order details + status                                       |
 | `/orderhistory`         | OrderHistoryScreen                  | user only `<isAuth>`    | Recap of previous orders                                              |
+| `/health`               |                                     | public `<Route>`        | Allows Render to check on the application’s health (via deployment settings)     |
 
 
 ## Pages
@@ -174,3 +175,5 @@ User model
 | orderRouter.GET         | `/mine`                          | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
 | orderRouter.GET         | `/:id`                           | { id }                     | 200            | 404          | Detail page of one order                                                                                          |
 | orderRouter.PUT         | `/:id/pay`                       | { id }                     | 200            | 404          | Updates payment status of order                                                                                              |
+| GET                     | `/health`                        |                            | 200            |             | Render will periodically call this endpoint as a means to monitor the health of the application                                                       |
+
